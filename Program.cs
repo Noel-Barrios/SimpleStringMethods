@@ -6,7 +6,14 @@ namespace SimpleStringMethods
     {
         static void Main(string[] args)
         {
+            //trimmingStrings();
+            //ReplacingStrings();
+            WorkingWithUpperAndLowerCase();
+        }
 
+
+        public static void TrimmingStrings()
+        {
             string greeting = "     Hello World!     ";
             Console.WriteLine($"[{greeting}]");
 
@@ -18,15 +25,29 @@ namespace SimpleStringMethods
             trimmedGreeting = trimmedGreeting.TrimEnd();
             Console.WriteLine($"[{trimmedGreeting}]");
 
-
-
-
             // using the Trim() method would essentially do the same thing.
             trimmedGreeting = greeting.Trim();
             Console.WriteLine($"[{trimmedGreeting}]");
-
-
-
         }
+
+
+        public static void ReplacingStrings () 
+        {
+            // the replace method searches for a substring and replaces it with different text.
+            // the replace method takes two parameters.  The first parameter is the string to search for.
+            // The second parameter is the text to replace it with. 
+            string sayHello = "Hello World!";
+            Console.WriteLine(sayHello);
+            sayHello = sayHello.Replace("Hello", "Greetings");
+            Console.WriteLine(sayHello);
+        }
+
+        public static void WorkingWithUpperAndLowerCase()
+        {
+            string hello = "Hello World!";
+            Console.WriteLine(hello.ToUpper());
+            Console.WriteLine(hello.ToLower());
+        }
+
     }
 }
