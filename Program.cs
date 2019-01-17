@@ -8,7 +8,8 @@ namespace SimpleStringMethods
         {
             //trimmingStrings();
             //ReplacingStrings();
-            WorkingWithUpperAndLowerCase();
+            //WorkingWithUpperAndLowerCase();
+            SearchingStrings();
         }
 
 
@@ -47,6 +48,24 @@ namespace SimpleStringMethods
             string hello = "Hello World!";
             Console.WriteLine(hello.ToUpper());
             Console.WriteLine(hello.ToLower());
+        }
+
+
+
+        public static void SearchingStrings()
+        {
+            string songLyrics = "You say goodbye, and I say hello";
+
+            // the contains method returns a boolean value which tells you if the string you were searching for was found.
+            Console.WriteLine(songLyrics.Contains("goodbye"));
+            Console.WriteLine(songLyrics.Contains("greetings"));
+
+            // the StartsWith and EndsWith methods are two similar methods to Contain.  
+            // these find a substring at the beginning or the end of the string. 
+            Console.WriteLine("\n" + songLyrics.StartsWith("You"));
+            Console.WriteLine(songLyrics.StartsWith("goodbye"));
+            Console.WriteLine("\n" + songLyrics.EndsWith("hello"));
+            Console.WriteLine(songLyrics.EndsWith("goodbye"));
         }
 
     }
